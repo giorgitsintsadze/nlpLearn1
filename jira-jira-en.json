@@ -1,0 +1,293 @@
+{
+  "name": "Code-related Questions",
+  "locale": "en-US",
+  "data": [
+    {
+      "intent": "code.createCollection",
+      "utterances": [
+        "How do I create a collection in Milvus using the provided code?",
+        "What is the process to create a collection in Milvus with the given code?",
+        "Can you guide me on creating a collection in Milvus using the provided code?",
+        "Please explain how to create a collection in Milvus with the given code.",
+        "Collection creation steps using the provided code?",
+        "How can I create a collection in Milvus with the provided code?",
+        "What's the command to create a collection in Milvus?",
+        "Create collection using the provided code",
+        "How to create a collection in Milvus based on the provided code?",
+        "createCollection",
+        "create collection",
+        "createcollection",
+        "collection"
+      ],
+      "answers": [
+        {
+          "answer": "To create a collection in Milvus using the provided code, you can use the `createCollection` function from the `CustomMilvusClient` class. The function takes the necessary parameters such as collection name, description, and field definitions to create the collection in the Milvus database.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.getIssueData",
+      "utterances": [
+        "How does the provided code retrieve issue data?",
+        "Explain the process of retrieving issue data with the given code.",
+        "Guide me on getting issue data using the provided code.",
+        "Please explain how the provided code retrieves issue data.",
+        "Steps to retrieve issue data using the provided code?",
+        "How can I retrieve issue data with the provided code?",
+        "What's the function used to get issue data in the provided code?",
+        "Retrieve issue data with the provided code",
+        "How to fetch issue data in the provided code?"
+      ],
+      "answers": [
+        {
+          "answer": "The provided code retrieves issue data using the `getIssueData` function. This function takes an issue object as input and extracts various properties such as key, assignee, fullContent, comments, url, summary, description, and timespent. It also performs caching of the issue data and calculates the OpenAI section embedding.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.main",
+      "utterances": [
+        "What does the `main` function do in the provided code?",
+        "Explain the purpose of the `main` function in the given code.",
+        "Guide me on the functionality of the `main` function in the provided code.",
+        "Please explain the role of the `main` function in the provided code.",
+        "What tasks are performed in the `main` function?",
+        "What's the entry point of the provided code?",
+        "Describe the functionality of the `main` function.",
+        "What does the `main` function execute in the provided code?",
+        "What's the purpose of the `main` function?"
+      ],
+      "answers": [
+        {
+          "answer": "In the provided code, the `main` function serves as the entry point and orchestrates the execution of various tasks. It first creates a collection in Milvus using the `createCollection` function. Then, it retrieves Jira issues page by page using the `uploadJiraIssuesPage` function. After uploading the issues, it creates an index on the collection using the `createIndex` function. Finally, it closes the Milvus connection. Essentially, the `main` function performs the main operations of creating a collection, uploading Jira issues, and creating an index.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.getRmgProjects",
+      "utterances": [
+        "How are the RMG projects obtained in the provided code?",
+        "Explain the process of getting the RMG projects with the given code.",
+        "Guide me on retrieving the RMG projects using the provided code.",
+        "Please explain how the provided code obtains the RMG projects.",
+        "Steps to get the RMG projects using the provided code?",
+        "How can I retrieve the RMG projects with the provided code?",
+        "What's the function used to obtain the RMG projects in the provided code?",
+        "Get the RMG projects with the provided code",
+        "How to retrieve the RMG projects in the provided code?"
+      ],
+      "answers": [
+        {
+          "answer": "The RMG projects are obtained in the provided code using the `getRmgProjects` function. This function returns an array of project names, which can be customized by uncommenting the desired projects in the function's implementation.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.forEachOfLimit",
+      "utterances": [
+        "What does the `forEachOfLimit` function do in the provided code?",
+        "Explain the purpose of the `forEachOfLimit` function in the given code.",
+        "Guide me on the functionality of the `forEachOfLimit` function in the provided code.",
+        "Please explain the role of the `forEachOfLimit` function in the provided code.",
+        "What tasks are performed in the `forEachOfLimit` function?",
+        "What's the function used for iterating over the projects in the provided code?",
+        "Describe the functionality of the `forEachOfLimit` function.",
+        "What does the `forEachOfLimit` function execute in the provided code?",
+        "What's the purpose of the `forEachOfLimit` function?"
+      ],
+      "answers": [
+        {
+          "answer": "In the provided code, the `forEachOfLimit` function is used for iterating over the RMG projects array. It processes each project sequentially by invoking the provided callback function for each project. The `forEachOfLimit` function limits the concurrency to a specified number, which can be adjusted as needed. It ensures that only a certain number of projects are processed simultaneously.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.uploadIssues",
+      "utterances": [
+        "What does the `uploadIssues` function do in the provided code?",
+        "Explain the purpose of the `uploadIssues` function in the given code.",
+        "Guide me on the functionality of the `uploadIssues` function in the provided code.",
+        "Please explain the role of the `uploadIssues` function in the provided code.",
+        "What tasks are performed in the `uploadIssues` function?",
+        "What's the function used for uploading Jira issues in the provided code?",
+        "Describe the functionality of the `uploadIssues` function.",
+        "What does the `uploadIssues` function execute in the provided code?",
+        "What's the purpose of the `uploadIssues` function?"
+      ],
+      "answers": [
+        {
+          "answer": "The `uploadIssues` function in the provided code is responsible for uploading Jira issues to the Milvus collection. It takes an array of issues as input and processes them using the `getIssueData` function. It then uses the Milvus client to insert the fields data into the collection. If the upload is successful, it prints the number of uploaded issues. Otherwise, it displays an error message along with the list of issues that failed to save.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.uploadIssues",
+      "utterances": [
+        "How are the issues uploaded in the provided code?",
+        "Explain the process of uploading issues with the given code.",
+        "Guide me on uploading issues using the provided code.",
+        "Please explain how the provided code uploads issues.",
+        "Steps to upload issues using the provided code?",
+        "How can I upload issues with the provided code?",
+        "What's the function used to upload issues in the provided code?",
+        "Upload issues with the provided code",
+        "How to upload issues in the provided code?"
+      ],
+      "answers": [
+        {
+          "answer": "In the provided code, issues are uploaded using the `uploadIssues` function. This function takes an array of issues as input and processes each issue using the `getIssueData` function. It then performs bulk insertion of the issue data into the Milvus collection using the `insert` function from the `CustomMilvusClient` class.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.createIndex",
+      "utterances": [
+        "How is the index created in the provided code?",
+        "Explain the process of creating an index with the given code.",
+        "Guide me on creating an index using the provided code.",
+        "Please explain how the provided code creates an index.",
+        "Steps to create an index using the provided code?",
+        "How can I create an index with the provided code?",
+        "What's the function used to create an index in the provided code?",
+        "Create index with the provided code",
+        "How to create an index in the provided code?",
+        "create index",
+        "index"
+      ],
+      "answers": [
+        {
+          "answer": "To create an index in the provided code, you can use the `createIndex` function from the `CustomMilvusClient` class. This function creates an index on the specified collection name using the default index type and parameters.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.uploadJiraIssuesPage",
+      "utterances": [
+        "How does the provided code upload Jira issues page by page?",
+        "Explain the process of uploading Jira issues page by page with the given code.",
+        "Guide me on uploading Jira issues page by page using the provided code.",
+        "Please explain how the provided code uploads Jira issues page by page.",
+        "Steps to upload Jira issues page by page using the provided code?",
+        "How can I upload Jira issues page by page with the provided code?",
+        "What's the function used to upload Jira issues page by page in the provided code?",
+        "Upload Jira issues page by page with the provided code",
+        "How to upload Jira issues page by page in the provided code?",
+        "upload jiraPage"
+      ],
+      "answers": [
+        {
+          "answer": "The provided code uploads Jira issues page by page using the `uploadJiraIssuesPage` function. This function takes a project key and an optional page number as input. It fetches the Jira issues of the specified project and uploads them to the Milvus collection using the `uploadIssues` function. It then recursively calls itself with an incremented page number until all the issues are uploaded.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.getIssueData",
+      "utterances": [
+        "What does the `getIssueData` function do in the provided code?",
+        "Explain the purpose of the `getIssueData` function in the given code.",
+        "Guide me on the functionality of the `getIssueData` function in the provided code.",
+        "Please explain the role of the `getIssueData` function in the provided code.",
+        "What tasks are performed in the `getIssueData` function?",
+        "What's the function used for retrieving Jira issue data in the provided code?",
+        "Describe the functionality of the `getIssueData` function.",
+        "What does the `getIssueData` function execute in the provided code?",
+        "What's the purpose of the `getIssueData` function?"
+      ],
+      "answers": [
+        {
+          "answer": "The `getIssueData` function in the provided code is responsible for retrieving and processing data related to a Jira issue. It takes an issue object as input and extracts relevant information such as key, assignee, full content, comments, URL, summary, description, and timespent. It also checks if the issue data is available in the cache directory and updates it if necessary. Furthermore, it generates an OpenAI section embedding for the full content using the `createEmbedding` function. Finally, it prepares and returns an object containing the processed issue data.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.uploadJiraIssuesPage",
+      "utterances": [
+        "What does the `uploadJiraIssuesPage` function do in the provided code?",
+        "Explain the purpose of the `uploadJiraIssuesPage` function in the given code.",
+        "Guide me on the functionality of the `uploadJiraIssuesPage` function in the provided code.",
+        "Please explain the role of the `uploadJiraIssuesPage` function in the provided code.",
+        "What tasks are performed in the `uploadJiraIssuesPage` function?",
+        "What's the function used for uploading Jira issues page by page in the provided code?",
+        "Describe the functionality of the `uploadJiraIssuesPage` function.",
+        "What does the `uploadJiraIssuesPage` function execute in the provided code?",
+        "What's the purpose of the `uploadJiraIssuesPage` function?"
+      ],
+      "answers": [
+        {
+          "answer": "The `uploadJiraIssuesPage` function in the provided code is responsible for uploading Jira issues of a specific project page by page. It takes a project name and an optional page number as inputs. The function retrieves the issues using the `getJiraIssuesOfProject` function and uploads them using the `uploadIssues` function. If there are more issues to fetch, it recursively calls itself with an incremented page number until all issues are uploaded.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.main.createIndex",
+      "utterances": [
+        "What does the `createIndex` function do in the provided code?",
+        "Explain the purpose of the `createIndex` function in the given code.",
+        "Guide me on the functionality of the `createIndex` function in the provided code.",
+        "Please explain the role of the `createIndex` function in the provided code.",
+        "What tasks are performed in the `createIndex` function?",
+        "What's the function used for creating an index in the provided code?",
+        "Describe the functionality of the `createIndex` function.",
+        "What does the `createIndex` function execute in the provided code?",
+        "What's the purpose of the `createIndex` function?"
+      ],
+      "answers": [
+        {
+          "answer": "The `createIndex` function in the provided code is used to create an index for the collection in Milvus. It calls the `createIndex` method of the `CustomMilvusClient` and passes the collection name as a parameter. This function is called after uploading all the Jira issues to the collection. The index creation improves search performance on the collection by building an index structure based on the specified fields.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.main.uploadJiraIssuesPage",
+      "utterances": [
+        "What does the `uploadJiraIssuesPage` function do in the `main` function of the provided code?",
+        "Explain the purpose of the `uploadJiraIssuesPage` function in the `main` function of the given code.",
+        "Guide me on the functionality of the `uploadJiraIssuesPage` function in the `main` function of the provided code.",
+        "Please explain the role of the `uploadJiraIssuesPage` function in the `main` function of the provided code.",
+        "What tasks are performed in the `uploadJiraIssuesPage` function within the `main` function?",
+        "What's the function used for uploading Jira issues within the `main` function of the provided code?",
+        "Describe the functionality of the `uploadJiraIssuesPage` function within the `main` function.",
+        "What does the `uploadJiraIssuesPage` function execute within the `main` function of the provided code?",
+        "What's the purpose of the `uploadJiraIssuesPage` function within the `main` function?"
+      ],
+      "answers": [
+        {
+          "answer": "The `uploadJiraIssuesPage` function within the `main` function of the provided code is responsible for uploading Jira issues of multiple projects. It iterates over the projects obtained from `getRmgProjects` and calls the `uploadJiraIssuesPage` function to upload issues for each project. This function ensures that the issues are uploaded page by page, handling the pagination internally. It controls the concurrency by limiting the number of projects being processed simultaneously using `forEachOfLimit`.",
+          "opts": ""
+        }
+      ]
+    },
+    {
+      "intent": "code.main",
+      "utterances": [
+        "What does the `main` function do in the provided code?",
+        "Explain the purpose of the `main` function in the given code.",
+        "Guide me on the functionality of the `main` function in the provided code.",
+        "Please explain the role of the `main` function in the provided code.",
+        "What tasks are performed in the `main` function?",
+        "What's the purpose of the `main` function?",
+        "Describe the functionality of the `main` function.",
+        "What does the `main` function execute in the provided code?",
+        "What's the role of the `main` function in the provided code?"
+      ],
+      "answers": [
+        {
+          "answer": "The `main` function in the provided code is the entry point of the program. It orchestrates the execution of various tasks required to upload Jira issues to the Milvus collection. Here's an overview of the tasks performed in the `main` function:\n\n1. Calls the `createCollection` function to create a new collection in Milvus.\n2. Retrieves the list of projects using the `getRmgProjects` function.\n3. Iterates over the projects and uploads Jira issues page by page using the `uploadJiraIssuesPage` function.\n4. Calls the `createIndex` function to create an index for the collection.\n5. Closes the Milvus connection.\n\nOverall, the `main` function ensures that the necessary data is uploaded to the Milvus collection for efficient search and retrieval.",
+          "opts": ""
+        }
+      ]
+    }
+  ]
+}
